@@ -1,24 +1,32 @@
 import java.util.*;
 public class DeviceList extends Device {
-	static void DeviceList() {
-		LinkedList<Device> DeviceList1 = new LinkedList<Device>();
+	
+	LinkedList<Device> DeviceList1;
+	Device devicePtr;
+	
+	DeviceList() {
+		DeviceList1 = new LinkedList<Device>();
+		devicePtr = DeviceList1.getFirst();
 	}
-	static void RemoveDeviceList(){
+	public void RemoveDeviceList(){
+		int size = DeviceList1.size();
+		for (int i = 0; i < size; i++) {
+			DeviceList1.remove(i);
+		}
+	}
+	public void AddDevice() {
 		
 	}
-	static void AddDevice() {
-		
-	}
-	static void printDevices() {
+	public void printDevices() {
 	
 	}
-	static void addProcess() {
+	public void addProcess() {
 			
 	}
-	static void decrementDevices() {
+	public void decrementDevices() {
 		
 	}
-	static void checkStatus() {
+	public void checkStatus() {
 		
 	}
 

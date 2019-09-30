@@ -1,11 +1,17 @@
 
 public class Device {
-	static void Device() {
-		String logicalName = null;
-		String physicalName = null;
-		boolean status = false;
-		int speed = 0;
-		int numProcesses = 0;
+	String logicalName;
+	String physicalName;
+	boolean status;
+	int speed;
+	int numProcesses;
+	
+	Device() {
+		logicalName = null;
+		physicalName = null;
+		status = false;
+		speed = 0;
+		numProcesses = 0;
 		
 	}
 	
