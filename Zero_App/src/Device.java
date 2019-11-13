@@ -1,4 +1,4 @@
-package myGroup;
+//package myGroup;
 //import java.util.*;
 //import processGroup;
 
@@ -17,11 +17,12 @@ public class Device {
 	numProcesses = 0;
    }
 	
-   public void initialize(){
-//	   logicalName=;									//Read in info from Device File - need to figure out how to read in data from file in Java
-//	   physicalName=;									|
-//	   speed =;											V
+   public void initialize(String logicalName, String physicalName, int speed){
+	   this.logicalName = logicalName;					//Read in info from Device File - need to figure out how to read in data from file in Java
+	   this.physicalName= physicalName;
+	   this.speed = speed;				
 	   enable();
+	  
    }
    
    public void addProcess(Process newPro){
@@ -49,12 +50,12 @@ public class Device {
    public void update(){
    }
    
-   public void printDevice(){
-	   	System.out.println("Logical Name: " + logicalName);
-	   	System.out.println("Physical Name: " + physicalName);
+   public void printDevice(Device deviceNode){
+	   	System.out.println("Logical Name: " + deviceNode.logicalName);
+	   	System.out.println("Physical Name: " + deviceNode.physicalName);
 	   	System.out.println("Status: "+ busy()); //(1)
-	   	System.out.println("Speed: " + speed);
-	   	System.out.println("Processes Queued: " + numProcesses);
+	   	System.out.println("Speed: " + deviceNode.speed);
+	   	System.out.println("Processes Queued: " + deviceNode.numProcesses);
    }
    
    public String busy(){		// (1) Not sure if String works this way
