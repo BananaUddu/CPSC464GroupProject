@@ -18,10 +18,17 @@ public class DeviceList<Device> extends LBList<Device>
 		this.add(newDevice);
 		
 	}
+	
 	public void printDevices() {		//prints contents of the device linked list through Device printDevice
-		for (int i = 0; i < DeviceList1.size(); i++) {
-			super.printDevice(DeviceList1.get(i));
-		}
+		LLNode<Device> device = devicePtr;
+		
+		do {
+			if(device == null)
+				break;
+			device.printDevice();
+			device = device.getNext();
+		}while(device != null);
+	}
 		
 	}
 	public void addProcess(Device newDevice) {
